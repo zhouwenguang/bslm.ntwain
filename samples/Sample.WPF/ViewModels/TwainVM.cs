@@ -69,6 +69,12 @@ namespace Sample.WPF
                 RaisePropertyChanged(() => SelectedSource);
                 if (_selectedSource != null)
                 {
+                    ScannerType.Is_Canon_G2090 = false;
+                    if (_selectedSource.Name.Contains("G2090"))
+                    {
+                        ScannerType.Is_Canon_G2090 = true;
+                        _session.ChangeAppTwainVersionTo1Point9();
+                    }
                     _selectedSource.Open();
                 }
             }

@@ -75,6 +75,12 @@ namespace NTwain
             return source;
         }
 
+        public void ChangeAppTwainVersionTo1Point9()
+        {
+            this._appId.ProtocolMajor = 1;
+            this._appId.ProtocolMinor = 9;
+        }
+
         #region ITwainSession Members
 
 
