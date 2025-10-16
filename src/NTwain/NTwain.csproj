@@ -1,6 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <PackageId>NTwain</PackageId>
+    <PackageId>BSNTwain</PackageId>
     <Description>Library containing the TWAIN API for dotnet.</Description>
     <TargetFrameworks>net5.0-windows;net6.0-windows;net462;net40</TargetFrameworks>
     <PackageProjectUrl>https://github.com/soukoku/ntwain</PackageProjectUrl>
@@ -9,14 +9,14 @@
     <PackageIconUrl>https://github.com/soukoku/ntwain/blob/master/Scanner-Icon.png?raw=true</PackageIconUrl>
     <RepositoryUrl>https://github.com/soukoku/ntwain</RepositoryUrl>
     <RepositoryType>GIT</RepositoryType>
-    <NeutralLanguage>en-US</NeutralLanguage>
+    <NeutralLanguage>zh-Hans</NeutralLanguage>
     <!--<Copyright>Eugene Wang 2012</Copyright>-->
-    <Authors>Eugene Wang</Authors>
+    <Authors>ZHOUWENGUANG</Authors>
     <!--<SignAssembly>true</SignAssembly>-->
     <!--<AssemblyOriginatorKeyFile>Sign.snk</AssemblyOriginatorKeyFile>-->
     <AssemblyVersion>3.0.0.0</AssemblyVersion>
-    <FileVersion>3.7.5</FileVersion>
-    <Version>3.7.5</Version>
+    <FileVersion>3.7.6</FileVersion>
+    <Version>3.7.6</Version>
     <LangVersion>7.1</LangVersion>
     <SignAssembly>True</SignAssembly>
     <PlatformTarget>x86</PlatformTarget>

@@ -39,10 +39,7 @@ namespace NTwain
                 PlatformInfo.Current.Log.Debug("Thread {0}: OpenSource.", Thread.CurrentThread.ManagedThreadId);
 
                 rc = _session.DGControl.Identity.OpenDS(this);
-                if (!ScannerType.Is_Canon_G2090)
-                {
-                    _session.UpdateCallback();
-                }
+                _session.UpdateCallback();
             });
             return rc;
         }

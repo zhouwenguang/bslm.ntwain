@@ -2138,7 +2138,7 @@ namespace NTwain.Data
         /// <summary>
         /// The minor version number of TWAIN supported by this library.
         /// </summary>
-        public const short ProtocolMinor = 3;
+        public const short ProtocolMinor = 1;
 
         /// <summary>
         /// Value for false where applicable.
