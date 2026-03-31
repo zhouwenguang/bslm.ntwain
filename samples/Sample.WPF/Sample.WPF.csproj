@@ -171,12 +171,6 @@
     <AppDesigner Include="Properties\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\src\NTwain\NTwain.csproj">
-      <Project>{0c5a6fb1-0282-4d61-8354-68deb1515001}</Project>
-      <Name>NTwain</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <None Include="scanner.ico" />
   </ItemGroup>
   <ItemGroup>
@@ -190,6 +184,12 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\NTwain\NTwain.csproj">
+      <Project>{0c5a6fb1-0282-4d61-8354-68deb1515001}</Project>
+      <Name>NTwain</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

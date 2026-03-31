@@ -26,7 +26,7 @@ namespace NTwain.Internals
             DataGroups xferGroup = DataGroups.None;
             XferMech imgXferMech = XferMech.Native;
             XferMech audXferMech = XferMech.Native;
-            if (session.DGControl.XferGroup.Get(ref xferGroup) == ReturnCode.Success)
+            if (!ScannerType.Is_Canon_G2090 && session.DGControl.XferGroup.Get(ref xferGroup) == ReturnCode.Success)
             {
                 xferAudio = (xferGroup & DataGroups.Audio) == DataGroups.Audio;
                 xferImage = xferGroup == DataGroups.None || (xferGroup & DataGroups.Image) == DataGroups.Image;
@@ -55,8 +55,16 @@ namespace NTwain.Internals
             #endregion
 
             var pending = new TWPendingXfers();
-            var rc = session.DGControl.PendingXfers.Get(pending);
-            if (rc == ReturnCode.Success || (session.DGControl.Status.GetSource(out var status) == ReturnCode.Success && status.ConditionCode == ConditionCode.SeqError))
+            var rc = ReturnCode.Failure;
+            if (ScannerType.Is_Canon_G2090)
+            {
+                rc = ReturnCode.Success;
+            }
+            else
+            {
+                rc = session.DGControl.PendingXfers.Get(pending);
+            }
+            if (rc == ReturnCode.Success)
             {
                 do
                 {
